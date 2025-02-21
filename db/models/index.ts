@@ -1,7 +1,5 @@
-import type * as s from "zapatos/schema"
+import type * as s from "zapatos/schema";
 
-type User = s.User.Whereable
+type User = s.User.Whereable;
 
-export {
-  User,
-}
+export { User };

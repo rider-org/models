@@ -1,0 +1,21 @@
+{
+  "name": "@rider/models",
+  "version": "1.0.0",
+  "description": "Includes all database items + operations as well as schema parsers & types that are used across Rider services.",
+  "main": "index.ts",
+  "scripts": {
+    "db:watch": "cd db && dotenvx run -- graphile-migrate watch",
+    "db:commit": "cd db && dotenvx run -- graphile-migrate commit",
+    "db:migrate": "cd db && dotenvx run -- graphile-migrate migrate",
+    "db:generate": "cd db && dotenvx run -- zapatos && mv models/zapatos/* ./models/ && rm -rf models/zapatos"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphile-migrate": "^1.4.1",
+    "postgres": "^3.4.5",
+    "zapatos": "^6.5.0",
+    "zod": "^3.24.2"
+  }
+}

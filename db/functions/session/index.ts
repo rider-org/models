@@ -81,3 +81,16 @@ export async function deleteSessionById({ id }: { id: string }, client: Sql) {
 
   return rs.length > 0;
 }
+
+export async function deleteSessionsByUserId(
+  { userId }: { userId: string },
+  client: Sql,
+) {
+  const rs = await client`
+    DELETE FROM "Session"
+    WHERE
+      userId=${userId}
+`;
+
+  return rs.length > 0;
+}

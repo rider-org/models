@@ -1,17 +1,14 @@
 import { Sql } from "postgres";
 import { User } from "../../models";
 
-export async function findUserById(
-  { userId }: { userId: string },
-  client: Sql,
-) {
+export async function findUserById({ id }: { id: string }, client: Sql) {
   const rs = await client<User[]>`
     SELECT
         *
     FROM
       "User"
     WHERE
-      id=${userId}
+      id=${id}
 `;
 
   return rs.length > 0 ? rs[0] : null;

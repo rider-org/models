@@ -1,5 +1,7 @@
 import type * as s from "zapatos/schema";
 
-type User = s.User.Whereable;
+type User = s.User.Selectable;
 
-export { User };
+type Session = s.Session.Selectable;
+
+export { User, Session };

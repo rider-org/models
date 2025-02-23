@@ -28,16 +28,6 @@ For details on how to use graphile-migrate, view the repository [here](https://g
 
 You want to write your current migration into the `current.sql` file you can find in the `/migrations` folder.
 
-**[OPTIONAL]** Then, you can run the following command to test out your migration while you write with the following command:
-
-```bash
-pnpm run db:watch
-```
-
-This will check to see if your `current.sql` file is valid and can be applied to your database with no issues.
-
-**You can choose not to run this command if you are sure that your SQL file has no issues. However, it is highly recommended you don't follow this path unless you know what you are doing.**
-
 Once you are ready to commit your migration, use the following command:
 
 ```bash

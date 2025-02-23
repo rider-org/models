@@ -1,7 +1,7 @@
-import type * as s from "zapatos/schema";
+import type * as s from "./schema.d.ts";
 
-type User = s.User.Selectable;
+declare type User = s.User.Selectable;
 
-type Session = s.Session.Selectable;
+declare type Session = s.Session.Selectable;
 
 export { User, Session };

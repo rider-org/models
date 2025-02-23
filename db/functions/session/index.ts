@@ -56,3 +56,13 @@ export async function createSession(
 
   return session;
 }
+
+export async function deleteSessionById({ id }: { id: string }, client: Sql) {
+  const rs = await client`
+    DELETE FROM "Session"
+    WHERE
+      id=${id}
+`;
+
+  return rs.length > 0;
+}

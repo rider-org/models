@@ -57,6 +57,21 @@ export async function createSession(
   return session;
 }
 
+export async function updateSessionById(
+  { deletedAt, id }: { deletedAt: Date; id: string },
+  client: Sql,
+) {
+  const rs = await client`
+    UPDATE "Session"
+    SET
+      deletedAt = ${deletedAt.toISOString()}
+    WHERE
+      id = ${id}
+`;
+
+  return rs.length > 0;
+}
+
 export async function deleteSessionById({ id }: { id: string }, client: Sql) {
   const rs = await client`
     DELETE FROM "Session"

@@ -18,9 +18,9 @@ brew install dotenvx/brew/dotenvx
 
 If you are running another OS or would prefer to install it another way, you can view the installation instructions [here](https://dotenvx.com/docs/install).
 
-Next, you will need to install zapatos, but since
+Finally, you should copy .env.example and rename it to .env and then populate the .env file. If you aren't sure what to populate, click [here](https://github.com/graphile/migrate?tab=readme-ov-file#getting-started)
 
-Finally, you should copy .env.example and rename it to .env and then populate the .env file.
+## Documentation
 
 For details on how to use graphile-migrate, view the repository [here](https://github.com/graphile/migrate). Or if you would like details on how to use Zapatos, click [here](https://jawj.github.io/zapatos)
 
@@ -86,7 +86,7 @@ import { User } from "../../models";
 
 export async function findUserById(
   { userId }: { userId: string },
-  client: Sql
+  client: Sql,
 ) {
   const rs = await client<User[]>`
     SELECT

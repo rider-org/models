@@ -36,6 +36,12 @@ declare module 'zapatos/schema' {
       */
       createdAt: Date;
       /**
+      * **User.googleId**
+      * - `text` in database
+      * - Nullable, no default
+      */
+      googleId: string | null;
+      /**
       * **User.id**
       * - `uuid` in database
       * - `NOT NULL`, default: `gen_random_uuid()`
@@ -49,6 +55,12 @@ declare module 'zapatos/schema' {
       * - `NOT NULL`, default: `now()`
       */
       createdAt: db.TimestampTzString;
+      /**
+      * **User.googleId**
+      * - `text` in database
+      * - Nullable, no default
+      */
+      googleId: string | null;
       /**
       * **User.id**
       * - `uuid` in database
@@ -64,6 +76,12 @@ declare module 'zapatos/schema' {
       */
       createdAt?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
+      * **User.googleId**
+      * - `text` in database
+      * - Nullable, no default
+      */
+      googleId?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      /**
       * **User.id**
       * - `uuid` in database
       * - `NOT NULL`, default: `gen_random_uuid()`
@@ -78,6 +96,12 @@ declare module 'zapatos/schema' {
       */
       createdAt?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.DefaultType | db.SQLFragment;
       /**
+      * **User.googleId**
+      * - `text` in database
+      * - Nullable, no default
+      */
+      googleId?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      /**
       * **User.id**
       * - `uuid` in database
       * - `NOT NULL`, default: `gen_random_uuid()`
@@ -91,6 +115,12 @@ declare module 'zapatos/schema' {
       * - `NOT NULL`, default: `now()`
       */
       createdAt?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.DefaultType | db.SQLFragment>;
+      /**
+      * **User.googleId**
+      * - `text` in database
+      * - Nullable, no default
+      */
+      googleId?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
       * **User.id**
       * - `uuid` in database

@@ -1,5 +1,5 @@
 import { Sql } from "postgres";
-import { User } from "../../models";
+import { User } from "../../entities";
 
 export async function findUserById({ id }: { id: string }, client: Sql) {
   const rs = await client<User[]>`

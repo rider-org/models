@@ -1,5 +1,5 @@
 import { Sql } from "postgres";
-import { Session } from "../../models";
+import { Session } from "../../entities";
 
 export async function findSessionById({ id }: { id: string }, client: Sql) {
   const rs = await client<Session[]>`

@@ -1,2 +1,2 @@
 export * from "./functions";
-export * from "./models/index.ts";
+export * from "./entities";

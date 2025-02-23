@@ -1,4 +1,4 @@
-import type * as s from "./schema.d.ts";
+import type * as s from "./schema";
 
 declare type User = s.User.Selectable;
 

@@ -24,7 +24,7 @@ export async function findSessionsByUserId(
     FROM
       "Session"
     WHERE
-      userId=${userId}
+      "userId"=${userId}
 `;
 
   return rs as Session[];
@@ -36,11 +36,11 @@ export async function createSession(
 ) {
   const rs = await client<{ id: string; createdAt: Date }[]>`
     INSERT INTO "Session"
-      (userId, expiresAt)
+      ("userId", "expiresAt")
     VALUES
       (${userId}, ${expiresAt})
     RETURNING
-      id, createdAt
+      id, "createdAt"
 `;
 
   if (rs.length == 0) {
@@ -64,7 +64,7 @@ export async function updateSessionById(
   const rs = await client`
     UPDATE "Session"
     SET
-      deletedAt = ${deletedAt.toISOString()}
+      "deletedAt" = ${deletedAt.toISOString()}
     WHERE
       id = ${id}
 `;
@@ -89,7 +89,7 @@ export async function deleteSessionsByUserId(
   const rs = await client`
     DELETE FROM "Session"
     WHERE
-      userId=${userId}
+      "userId"=${userId}
 `;
 
   return rs.length > 0;

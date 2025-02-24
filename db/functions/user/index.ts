@@ -24,7 +24,7 @@ export async function findUserByGoogleId(
     FROM
       "User"
     WHERE
-      googleId=${googleId}
+      "googleId"=${googleId}
 `;
 
   return rs.length > 0 ? rs[0] : null;
@@ -36,7 +36,7 @@ export async function createUser(
 ) {
   const rs = await client<{ id: string }[]>`
       INSERT INTO "User"
-        (email, googleId)
+        (email, "googleId")
       VALUES
         (${email ?? null}, ${googleId ?? null})
       RETURNING

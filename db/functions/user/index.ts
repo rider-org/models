@@ -14,6 +14,22 @@ export async function findUserById({ id }: { id: string }, client: Sql) {
   return rs.length > 0 ? rs[0] : null;
 }
 
+export async function findUserByGoogleId(
+  { googleId }: { googleId: string },
+  client: Sql,
+) {
+  const rs = await client<User[]>`
+    SELECT
+      *
+    FROM
+      "User"
+    WHERE
+      googleId=${googleId}
+`;
+
+  return rs.length > 0 ? rs[0] : null;
+}
+
 export async function createUser(
   { email, googleId }: { email?: string; googleId?: string },
   client: Sql,

@@ -473,7 +473,7 @@ export namespace User {
           string | db.Parameter<string> | db.DefaultType | db.SQLFragment
         >;
   }
-  export type UniqueIndex = "User_pkey";
+  export type UniqueIndex = "User_pkey" | "unique_google_id";
   export type Column = keyof Selectable;
   export type OnlyCols<T extends readonly Column[]> = Pick<
     Selectable,

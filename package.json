@@ -20,8 +20,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@rider/packages": "github:rider-org/packages",
+    "eslint": "^9.21.0",
     "graphile-migrate": "^1.4.1",
     "postgres": "^3.4.5",
+    "typescript-eslint": "^8.24.1",
     "zapatos": "^6.5.0",
     "zod": "^3.24.2"
   },

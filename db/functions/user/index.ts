@@ -1,4 +1,5 @@
 import { Sql } from "postgres";
+
 import { User } from "../../entities";
 
 export async function findUserById({ id }: { id: string }, client: Sql) {

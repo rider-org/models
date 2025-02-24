@@ -23,6 +23,7 @@ export type ApiDefault<T = unknown, TDebug = never> = Prettify<
   SuccessType<T, TDebug> | ErrorType<TDebug>
 >;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type DebugDefault<T = any> = Prettify<
   { message: string; date: Date } & Record<string, T>
 >;

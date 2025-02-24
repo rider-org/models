@@ -1,4 +1,5 @@
 import { Sql } from "postgres";
+
 import { Session } from "../../entities";
 
 export async function findSessionById({ id }: { id: string }, client: Sql) {

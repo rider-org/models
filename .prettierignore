@@ -1,1 +1,2 @@
-pnpm-lock.yaml
+pnpm-lock.yaml*
+db/entities/schema.d.ts

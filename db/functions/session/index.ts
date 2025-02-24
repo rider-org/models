@@ -38,7 +38,7 @@ export async function createSession(
     INSERT INTO "Session"
       (userId, expiresAt)
     VALUES
-      (${userId}, ${expiresAt}
+      (${userId}, ${expiresAt})
     RETURNING
       id, createdAt
 `;

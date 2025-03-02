@@ -19,7 +19,21 @@ brew install dotenvx/brew/dotenvx
 If you are running another OS or would prefer to install it another way, you can view the installation instructions [here](https://dotenvx.com/docs/install).
 
 Finally, you should copy `.env.example` and rename it to `.env` and then populate the `.env` file. If you aren't sure what to populate, click [here](https://github.com/graphile/migrate?tab=readme-ov-file#getting-started)
-If you are on the core Rider team, we are not supporting `dotenv` cloud syncing for this repository because it is **VERY** unlikely that we will need more than those 3 environment variables.
+
+If you are part of the core Rider team, you can simply run:
+
+```bash
+pnpm run env:init
+```
+
+to initialize the `.env` file.
+
+You can use the following commands to pull and push (BUT BE CAREFUL)
+
+```bash
+pnpm run env:pull
+pnpm run env:push
+```
 
 ## Documentation
 
